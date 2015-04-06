@@ -1,0 +1,32 @@
+{
+  "name": "polyglotweekly.com",
+  "version": "1.0.0",
+  "description": "curated weekly articles on the art of programming.",
+  "main": "index.js",
+  "scripts": {
+    "generate": "articleify generate",
+    "build": "articleify build -t ./assets/templates; lessc ./assets/styles/article.less > ./articles/article.css;  lessc ./assets/styles/index.less > ./articles/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polyglotweekly/polyglotweekly.com.git"
+  },
+  "keywords": [
+    "polyglot",
+    "programming",
+    "articles"
+  ],
+  "author": "Ben Coe <ben@npmjs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polyglotweekly/polyglotweekly.com/issues"
+  },
+  "homepage": "https://github.com/polyglotweekly/polyglotweekly.com",
+  "devDependencies": {
+    "articleify": "^1.0.1",
+    "less": "^2.5.0"
+  },
+  "dependencies": {
+    "restify": "^3.0.1"
+  }
+}
