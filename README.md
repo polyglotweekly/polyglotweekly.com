@@ -1,3 +1,3 @@
 # polyglotweekly.com
 
-Curated weekly articles on the art of programming.
+Curated articles on the art of programming.
