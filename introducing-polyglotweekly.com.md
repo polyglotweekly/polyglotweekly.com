@@ -177,7 +177,7 @@ merged onto the master branch:
 
 The Polyglot Weekly platform is completely open-source, patches welcome!
 
-## In Conclusion
+## Epilogue
 
 I'm personally very excited about this project, but Polyglot Weekly needs you!
 

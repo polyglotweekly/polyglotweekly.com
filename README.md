@@ -36,4 +36,3 @@ Articles are submitted to the [polyglotweekly.com repository](https://github.com
 
 Once the conversation surrounding an article is complete, it will be merged
 onto master, and will be become visible on [www.polyglotweekly.com](http://www.polyglotweekly.com/).
->>>>>>> updated README with text from intro post
