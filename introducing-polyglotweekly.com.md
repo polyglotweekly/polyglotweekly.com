@@ -34,7 +34,7 @@ Anyone can submit a pull request for an article to Polyglot Weekly, simply run:
 ```shell
 git clone https://github.com/polyglotweekly/polyglotweekly.com.git
 cd polyglotweekly.com
-nvm use nvm use 0.10 # sorry, no 0.12.x or iojs yet.
+nvm use 0.10 # sorry, no 0.12.x or iojs yet.
 npm install
 npm run generate
 ```
