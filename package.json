@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/polyglotweekly/polyglotweekly.com/issues"
   },
-  "homepage": "https://github.com/polyglotweekly/polyglotweekly.com",
+  "homepage": "http://www.polyglotweekly.com",
   "devDependencies": {
     "articleify": "^1.0.1",
     "browserify": "^9.0.8",
