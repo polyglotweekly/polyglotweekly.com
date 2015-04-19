@@ -11,7 +11,7 @@ It's been almost a year since I wrote an article about programming, this makes m
 
 > Polyglot Weekly grows from the question, "what would get me blogging more often?"
 
-I love writing. It forces me to step back, reflect on what I've been learning, and helps solidify it.
+I love writing. It forces me to step back and reflect on what I've been learning &mdash; it helps solidify it.
 
 Polyglot Weekly grows from the question, "what would get me blogging more often?" I came up with a list of answers:
 
@@ -43,7 +43,7 @@ Keep the following contribution guidelines in mind:
 
 * Articles should be on the topic of programming: articles advertising your start-up,
   discussing Bay-Area culture, or pointing out your favorite dog grooming techniques will be politely declined.
-* keep contributions positive! your article should not be a rant about why
+* Keep contributions positive! your article should not be a rant about why
   Ruby is better than Go. Feel free to criticize aspects of your language
   of expertise, but do so in a constructive manner.
 * Provide concrete examples in code. Polyglot Weekly uses a [great syntax-highlighter](https://github.com/atom/highlights) extracted from the Atom Text Editor, take advantage of it.
@@ -75,30 +75,6 @@ you'd like to contribute an article.
 
 Polyglot Weekly uses the same engine as the [Atom Text Editor](https://atom.io/) for syntax-highlighting. A variety of languages are supported:
 
-**shell**
-
-```shell
-if [ "$UID" -ne 0 ]
-then
- echo "Superuser rights is required"
- echo 'Printing the # sign'
- exit 2
-fi
-```
-
-**clojure**
-
-```clojure
-; Comment
-
-(def
-  ^{:macro true
-    :added "1.0"}
-  let (fn* let [&form &env & decl] (cons 'let* decl)))
-
-(def ^:dynamic chunk-size 17)
-```
-
 **ruby**
 
 ```ruby
@@ -112,21 +88,6 @@ describe RubyBox::File do
     file.id.should == '2631999573'
   end
 end
-```
-
-**js**
-
-```js
-hashchange.update(function (hash) {
-  var prefix = 'user-content-'
-
-  if (hash.indexOf(prefix) === 0) {
-    hashchange.updateHash(hash.replace(prefix, ''))
-  } else {
-    var anchor = $('#' + prefix + hash)
-    if (anchor.length) $(document).scrollTop(anchor.offset().top)
-  }
-})
 ```
 
 **go**
@@ -181,7 +142,7 @@ The Polyglot Weekly platform is open-source, and patches are very welcome.
 
 ## Epilogue
 
-I'm personally very excited about this project, but Polyglot Weekly needs you!
+I'm personally very excited about this project, but **Polyglot Weekly needs you!**
 
 * Would you like to contribute an article? Don't be shy, read the contribution
   guidelines and submit an article.
@@ -190,4 +151,4 @@ I'm personally very excited about this project, but Polyglot Weekly needs you!
 
 I can't wait to see what comes of this,
 
--- Ben.
+&mdash; Ben.
