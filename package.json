@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "generate": "articleify generate",
-    "build": "articleify build -t ./assets/templates; lessc ./assets/styles/article.less > ./articles/article.css;  lessc ./assets/styles/index.less > ./articles/index.css"
+    "build": "articleify build -t ./assets/templates; lessc ./assets/styles/article.less > ./articles/article.css;  lessc ./assets/styles/index.less > ./articles/index.css; ./node_modules/.bin/browserify ./assets/javascript/*.js > ./articles/combined.js"
   },
   "repository": {
     "type": "git",
@@ -21,12 +21,15 @@
   "bugs": {
     "url": "https://github.com/polyglotweekly/polyglotweekly.com/issues"
   },
-  "homepage": "https://github.com/polyglotweekly/polyglotweekly.com",
+  "homepage": "http://www.polyglotweekly.com",
   "devDependencies": {
-    "articleify": "^1.0.1",
+    "articleify": "^1.2.0",
+    "browserify": "^9.0.8",
     "less": "^2.5.0"
   },
   "dependencies": {
+    "hashchange": "^1.0.0",
+    "jquery": "^2.1.3",
     "restify": "^3.0.1"
   }
 }
