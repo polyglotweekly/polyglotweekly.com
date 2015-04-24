@@ -55,13 +55,15 @@ I loved optimist and yargs because of their great off the shelf functionality. I
 * as I now much better understand, generating a slick looking
   command-line-interface is hard!
 
-Here's a wonderful thing about open-source-software, I could jump into the fray and help fix things. I began by opening tickets for the specific issues I was
+Here's the wonderful thing, I could jump into the fray and help fix things. I began by opening tickets for the specific issues I was
 seeing:
 
 * [https://github.com/bcoe/yargs/issues/63](https://github.com/bcoe/yargs/issues/63)
 * [https://github.com/bcoe/yargs/issues/66](https://github.com/bcoe/yargs/issues/66)
 
-Over the next several months, I began submitting patches for these and other issues.
+Over the next several months, I began submitting patches for these and other issues:
+
+* [https://github.com/bcoe/yargs/pull/67](https://github.com/bcoe/yargs/pull/67)
 
 Alex was very receptive to the fixes, but was obviously very busy. Rather
 than getting grumpy about my patches taking a while to land, I started
@@ -160,9 +162,9 @@ feature or undertake [a major refactor](https://github.com/bcoe/yargs/pull/151).
 
 This has paid off huge!
 
-* it has given yargs a great pool of testers to help hammer on things
+* It has given yargs a great pool of testers to help hammer on things
   as new features are added.
-* it has encouraged people to actively participate as features are added,
+* It has encouraged people to actively participate as features are added,
  making for much better features.
 
 _Furthermore..._
@@ -175,14 +177,10 @@ started asking for features that made collaboration easier:
 One user suggested that we [start a Changelog](https://github.com/bcoe/yargs/issues/120). This is a great
 way to communicate to everyone the history of the project, and can
 help with forensic analysis when a bug is introduced. [James Nylen](https://github.com/nylen), one of the
-core contributors to [request](https://github.com/request/request), joined the conversation and pointed out how they auto-generated their Changelog:
-
-* [github-changes](https://github.com/lalitkapoor/github-changes): Generate a changelog based on merged pull requests or commit messages.
+core contributors to [request](https://github.com/request/request), joined the conversation and pointed out how they auto-generated theirs using [github-changes](https://github.com/lalitkapoor/github-changes):
 
 Another user asked that we [add a style-guide to yargs](https://github.com/bcoe/yargs/issues/144). It would help them
-better match the current style, and therefore make it easier to contribute. In the past I'd shied away from style-guides &mdash; _don't fence me in!_ &mdash; hearing the request in this way was compelling. We settled on the standard style, and coding style validation is now part of the build process:
-
-* [standard](https://github.com/feross/standard): JavaScript Standard Style — One Style to Rule Them All.
+better match the current style, and therefore make it easier to contribute. In the past I'd shied away from style-guides &mdash; _don't fence me in!_ &mdash; hearing the request put in this way was compelling. We settled on the [standard](https://github.com/feross/standard) style, and code style validation is now part of the build process:
 
 _Along with community engagement, there was another theme that fell out of the yargs rewrite and improved the project immensely..._
 
