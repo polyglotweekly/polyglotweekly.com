@@ -244,7 +244,7 @@ func paintingLoop(ch chan interface{}) {
     // shorthand for a loop over receiving over
     // a channel
     for msg := range ch {
-        switch ch.(type) {
+        switch msg.(type) {
             case Quit:
                 // quit
             case DrawLine:
