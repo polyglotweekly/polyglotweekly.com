@@ -196,9 +196,9 @@ fn painting_loop(rx: Receiver<MyMessage>) {
 }
 
 // On the sender end
-fn draw_thingy(tx: Sender<MyMessage) {
+fn draw_thingy(tx: Sender<MyMessage>) {
     tx.send(DrawLine(Red, Point{x:0, y:0}, Point{x: 1, y: 1}));
-    tx.send(SetBackground(Blue))
+    tx.send(SetBackground(Blue));
     // we can't send anything other than `MyMessage` variants    
 }
 
