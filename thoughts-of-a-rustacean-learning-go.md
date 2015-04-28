@@ -389,7 +389,7 @@ type thingy struct{
 // private
 func foo(){}
 // public
-func bar(){}
+func Bar(){}
 ```
 
 On the other hand, Rust has a keyword for exporting things, and whilst it has style recommendations
