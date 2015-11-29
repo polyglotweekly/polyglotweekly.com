@@ -30,13 +30,13 @@ of different build tools (_gulp_, _grunt_, _webpack_, _browserify_), and the par
 
 In the process of adding Babel support to nyc I took notes, my goal being to outline a
 _dead simple_ approach for writing ES2015 modules that work on older versions of Node.js: using
-npm scripts instead of build tools, keeping helper libraries to a minimum, and avoiding
+npm scripts instead of build tools, keeping library dependencies to a minimum, and avoiding
 build steps where possible.
 
 ES2015 introduces many [awesome language features](https://babeljs.io/docs/learn-es2015/) to your JavaScript repertoire,
 and I hope this tutorial will convince you to dive in and start playing.
 
-For the purpose of this discussion I've created the ES2015 module yarsay, which you can use to follow along:
+For the purpose of this discussion I've created the ES2015 module yarsay, clone it and follow along:
 
 [https://github.com/bcoe/yarsay](https://github.com/bcoe/yarsay)
 
@@ -77,14 +77,13 @@ For my [ES2015 sample project](https://github.com/bcoe/yarsay) I used the follow
 * `lib/`: this directory contains the transpiled ES5 code (you probably shouldn't
   add this directory to source control).
 * `test/`: the test directory (the tests exercise the ES2015 code in the
-  `/src` directory, rather than the transpiled code).
+  `/src` directory rather than the transpiled code).
 
 ## Unit Tests and Coverage
 
-Babel provides the module `babel-register`, which hooks into Node's require statement. This hook compiles your ES2015 code on the fly as your project needs it. `babel-register` is great for writing unit-tests, allowing you to exercise your ES2015 code directly without executing your build step.
+Babel provides the module `babel-register` which hooks into Node's require statement. This hook compiles your ES2015 code on the fly as your project needs it. `babel-register` is great for writing unit-tests, allowing you to exercise your ES2015 code directly without executing your build step.
 
-The test coverage tool nyc integrates with `babel-register`, allowing you to add coverage reporting
-and transpilation in one fell swoop. Here's how this can be achieved:
+The test coverage tool [nyc](https://github.com/bcoe/nyc) integrates with `babel-register`, allowing you to add coverage reporting and transpilation in one fell swoop. Here's how this can be achieved:
 
 1. install your favorite unit testing framework (in my case `npm i mocha --save-dev`).
 2. install `nyc` (`npm i nyc --save-dev`), `nyc` will be used both for instrumenting
@@ -119,7 +118,7 @@ Here are the important parts of `yarsay`'s _package.json_:
 }
 ```
 
-* `build`: enters the ES2015 source directory and executes the transpiler, storing the final source-code in `/lib`.
+* `build`: enters the ES2015 source directory and executes the transpiler, and stores the final source-code in `/lib`.
 * `prepublish`: executes when you publish a new version of the module and simply runs the build step.
 * `test`: uses nyc to run the test suite, compiling ES2015 code on the fly.
 * `pretest`: I'm a fan of the [standard](https://github.com/feross/standard) code-style tool, and generally run this as a `pretest` hook.
@@ -127,10 +126,10 @@ Here are the important parts of `yarsay`'s _package.json_:
 
 When we run `npm publish`, the build script executes, and we ultimately publish the cross-platform ES5 source code.
 
-## Now go forth
+## Now Go Forth
 
 That's all there is to it! using a few npm scripts, `nyc`, and our favorite test runner, we've created
-a module that allows us to write and test code in ES2015, while publishing a version that works on
+an environment that allows us to write and test code in ES2015, while publishing a modules that work on
 legacy versions of Node.js.
 
 I encourage you to play with [yarsay](https://github.com/bcoe/yarsay) and use it as a jumping off point
