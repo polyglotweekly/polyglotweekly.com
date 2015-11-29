@@ -1,5 +1,5 @@
 <!--
-headline: Writing Your First ES2015 JavaScript Module
+headline: Writing Your First ES2015 Module With Babel
 description: A dead simple guide to writing your first ES2015 module using Babel.
 author: Ben Coe
 datePublished: 2015-11-29
@@ -133,7 +133,7 @@ That's all there is to it! using a few npm scripts, `nyc`, and our favorite test
 an environment that allows us to write and test code in ES2015, while publishing a modules that work on
 legacy versions of Node.js.
 
-I encourage you to play with [yarsay](https://github.com/bcoe/yarsay) and use it as a jumping off point
+I encourage you to play with [yarsay](https://github.com/bcoe/yarsay) and use it as a starting point
 for your own ES2015 modules.
 
 If you have any follow up questions, or corrections, please open issues on [polyglotweekly.com](https://github.com/polyglotweekly/polyglotweekly.com).
