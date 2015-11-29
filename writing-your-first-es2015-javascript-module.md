@@ -129,7 +129,7 @@ When we run `npm publish`, the build script executes, and we ultimately publish 
 
 ## Now Go Forth
 
-That's all there is to it! using a few npm scripts, `nyc`, and our favorite test runner, we've created
+That's all there is to it! Using a few npm scripts, `nyc`, and our favorite test runner, we've created
 an environment that allows us to write and test code in ES2015, while publishing a modules that work on
 legacy versions of Node.js.
 
