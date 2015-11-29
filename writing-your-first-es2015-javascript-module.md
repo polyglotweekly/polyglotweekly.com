@@ -29,20 +29,22 @@ There are many different approaches folks use to wire up ES2015 to ES5 transpila
 of different build tools (_gulp_, _grunt_, _webpack_, _browserify_), and the paradox of choice can be overwhelming.
 
 In the process of adding Babel support to nyc I took notes, my goal being to outline a
-_dead simple_ approach for writing ES2015 modules that work on older versions of Node.js: using
-npm scripts instead of build tools, keeping library dependencies to a minimum, and avoiding
-build steps where possible.
+_dead simple_ approach for writing ES2015 modules that work on older versions of Node.js. An approach that emphasizes:
+
+* using npm scripts rather than of build tools.
+* keeping library dependencies to a minimum.
+* and, where possible, avoiding unnecessary build steps.
 
 ES2015 introduces many [awesome language features](https://babeljs.io/docs/learn-es2015/) to your JavaScript repertoire,
 and I hope this tutorial will convince you to dive in and start playing.
 
-For the purpose of this discussion I've created the ES2015 module yarsay, clone it and follow along:
+For the purpose of this discussion I've created the ES2015 module yarsay. Clone it and follow along:
 
 [https://github.com/bcoe/yarsay](https://github.com/bcoe/yarsay)
 
 ## Installing and Configuring Babel
 
-To get up and running you'll first want to install the babel development dependencies:
+To get up and running you'll first want to install the Babel development dependencies:
 
 ```sh
 npm i babel-cli babel-core babel-preset-es2015 --save-dev
@@ -50,13 +52,13 @@ npm i babel-cli babel-core babel-preset-es2015 --save-dev
 
 Let's look at each of these:
 
-* *babel-core:* the bare-bones babel compiler (without the plugins that make it actually transpile).
+* *babel-core:* the bare-bones Babel compiler (without the plugins that make it actually transpile).
 * *babel-preset-es2015:* provides the set of plugins necessary to transpile ES2015 code.
 * *babel-cli:* the command-line tool used to package your module for publication to npm.
 
-> transpilation refers to converting our ES2015 source code to ES5, a flavor of JavaScript that works on older versions of Node.js.
+> Transpilation refers to converting your ES2015 source code to ES5, a flavor of JavaScript that works on older versions of Node.js.
 
-Once you have the babel dependencies installed, the next step is to create `.babelrc` file in the root of
+Once you have the babel dependencies installed, the next step is to create a `.babelrc` file in the root of
 your project to configure Babel:
 
 ```json
@@ -67,7 +69,7 @@ your project to configure Babel:
 
 This configuration tells Babel that we want to use the [babel-preset-es2015](http://babeljs.io/docs/plugins/preset-es2015/) module that we installed previously.
 
-Having installed the Babel dependencies, let's next look at the directory structure of our `yarsay` module:
+Having installed the Babel dependencies, let's next look at the directory structure of our `yarsay` module.
 
 ## Structuring Your Project
 
@@ -76,7 +78,7 @@ For my [ES2015 sample project](https://github.com/bcoe/yarsay) I used the follow
 * `src/`: contains the pre-transpiled ES2015 source files.
 * `lib/`: contains the transpiled ES5 code (you should avoid adding this directory to source control).
 * `test/`: the test directory (the tests exercise the ES2015 code in the
-  `/src` directory, rather than the transpiled code).
+  `src/` directory, rather than the transpiled code).
 
 ## Unit Tests and Coverage
 
