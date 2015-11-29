@@ -82,13 +82,13 @@ For my [ES2015 sample project](https://github.com/bcoe/yarsay) I used the follow
 
 ## Unit Tests and Coverage
 
-`babel-core` provides the module `babel-register` which hooks into Node's require statement. This hook compiles your ES2015 code on the fly as your project needs it. `babel-register` is great for writing unit-tests, allowing you to exercise your ES2015 code directly without executing your build step.
+`babel-core` provides the module `babel-register` which hooks into Node.js' `require` statement. This hook compiles your ES2015 code on the fly as your project needs it. `babel-register` is great for writing unit tests, allowing you to exercise your ES2015 code directly without executing your build step.
 
 The test coverage tool [nyc](https://github.com/bcoe/nyc) integrates with `babel-register`, allowing you to add coverage reporting and transpilation in one fell swoop. Here's how this can be achieved:
 
 1. install your favorite unit testing framework (in my case, `npm i mocha --save-dev`).
-2. install `nyc` (`npm i nyc --save-dev`), `nyc` will be used both for instrumenting
-  test coverage, and for compiling ES2015 code on the fly.
+2. install `nyc` (`npm i nyc --save-dev`) which will be used both for instrumenting
+  test coverage and for compiling ES2015 code on the fly.
 3. add a `test` script to your `package.json` that looks something like this:
 
 ```sh
@@ -100,8 +100,8 @@ test suite, eliminating the need for a transpilation step when running your test
 
 ## Packaging Your ES2015 Module
 
-It's nice to be able to run your unit-tests against the raw ES2015 code, but when publishing
-a module you want it to work on a variety of platforms, we achieve this by adding a `prepublish`
+It's nice to be able to run your unit tests against the raw ES2015 code, but when publishing
+a module you want it to work on a variety of platforms. We achieve this by adding a `prepublish`
 build step to our ES2015 module. I'm a big fan of using npm scripts for this sort of thing.
 
 Here are the important parts of `yarsay`'s _package.json_:
