@@ -119,11 +119,11 @@ Here are the important parts of `yarsay`'s _package.json_:
 }
 ```
 
-* `build`: enters the ES2015 source directory and executes the transpiler, and stores the final source-code in `/lib`.
-* `prepublish`: executes when you publish a new version of the module and simply runs the build step.
-* `test`: uses nyc to run the test suite, compiling ES2015 code on the fly.
-* `pretest`: I'm a fan of the [standard](https://github.com/feross/standard) code-style tool, and generally run this as a `pretest` hook.
-* `main`/`bin`: note that `main` and `bin` both reference the compiled code in the `lib/` folder.
+* `build`: Uses Babel to transpile the ES2015 source into ES5 code, which is output in lib/.
+* `prepublish`: Executes when you publish a new version of the module and simply runs the `build` script.
+* `test`: Uses nyc to run the test suite, transpiling ES2015 code on the fly.
+* `pretest`: I'm a fan of the [standard](https://github.com/feross/standard) code-style tool. I generally run this as a `pretest` hook.
+* `main`/`bin`: Note that `main` and `bin` both reference the transpiled code in the `lib/` folder.
 
 When we run `npm publish`, the build script executes, and we ultimately publish the cross-platform ES5 source code to npm.
 
